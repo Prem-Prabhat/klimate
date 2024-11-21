@@ -25,8 +25,8 @@ function App() {
       <BrowserRouter>
         <ThemeProvider defaultTheme="dark">
           <Layout>
-            <Routes>
             <Analytics/>
+            <Routes>
               <Route path="/" element={<WeatherDashboard />} />
               <Route path="/city/:cityName" element={<CityPage />} />
             </Routes>
