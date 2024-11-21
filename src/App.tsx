@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "./components/ui/sonner";
@@ -25,6 +26,7 @@ function App() {
         <ThemeProvider defaultTheme="dark">
           <Layout>
             <Routes>
+            <Analytics/>
               <Route path="/" element={<WeatherDashboard />} />
               <Route path="/city/:cityName" element={<CityPage />} />
             </Routes>
